@@ -1,0 +1,39 @@
+##设置tomcat端口号
+#server:
+#  port: 8080
+#
+##定义简单数据的配置项
+#name: 金桥工程
+#
+##定义对象
+#person:
+#  name: 张三
+#  pwd: 123
+#
+##定义数组和list集合
+#student:
+#  - name: admin
+#    address: 北京
+#  - name: 李四
+#    address: 南京
+
+spring:
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/test
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.jdbc.Driver
+
+#  mvc:
+#    view:
+#      prefix: /WEB-INF/view #自定义beetl模板位置，即页面文件路径
+
+mybatis-plus:
+  mapper-locations: classpath:mapping/*.xml
+  type-aliases-package: com.jxd.sturtack.model
+
+beetl:
+#  suffix: html  #把模板的后缀改为html的
+
+  delimiter-statement-start: \@ #开始界定符（yaml不允许以@开头）
+  delimiter-statement-end: null #结束符
