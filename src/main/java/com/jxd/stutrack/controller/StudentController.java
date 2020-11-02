@@ -51,7 +51,7 @@ public class StudentController extends ApiController {
         String str = "添加失败";
         if(studentService.save(student)){
             Integer sid = studentService.getSid(student);
-            User user = new User(sid.toString(),"123");
+            User user = new User(sid.toString(),"123",1);
             if(userService.save(user)){
                 str = "添加成功";
             }else{
