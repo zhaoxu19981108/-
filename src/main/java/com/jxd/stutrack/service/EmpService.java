@@ -4,11 +4,11 @@ import com.baomidou.mybatisplus.extension.service.IService;
 import com.jxd.stutrack.model.Emp;
 
 /**
- * @创建人 Song pengfei
- * @创建时间 2020/10/29
- * @描述
+ * (Emp)表服务接口
+ *
+ * @author makejava
+ * @since 2020-10-31 14:38:15
  */
-public interface IEmpService extends IService<Emp> {
-
+public interface EmpService extends IService<Emp> {
 
 }
