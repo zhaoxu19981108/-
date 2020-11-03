@@ -4,5 +4,15 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="com.jxd.stutrack.mapper.TeacherMapper">
-
+    <!--分页遍历、模糊查询-->
+    <select id="getAllTeacher" resultType="map">
+        select * from teacher
+        <where>
+            <if test="'all'!=tname">
+                sname like concat('%',#{tname},'%')
+            </if>
+            and teacherstate = 0
+        </where>
+        LIMIT #{counts},#{pagesize}
+    </select>
 </mapper>
